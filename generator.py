@@ -88,7 +88,7 @@ def mp_rom_qstr(name, value):
 
 
 def mp_dict(name, elements):
-    return "STATIC const mp_rom_map_elem_t {name}_dict_table[]={{{elements}\n}};\nSTATIC MP_DEFINE_DICT({name}_dict, {name}_dict_table);".format(
+    return "static const mp_rom_map_elem_t {name}_dict_table[]={{{elements}\n}};\nSTATIC MP_DEFINE_DICT({name}_dict, {name}_dict_table);".format(
         name=name, elements=elements
     )
 
